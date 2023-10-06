@@ -15,6 +15,7 @@ import { CpfPipe } from './pipes/pipe/cpf.pipe';
 import {MatMenuModule} from '@angular/material/menu';
 import {LayoutModule} from './layout/layout.module';
 import {UsuarioModule} from './usuario/usuario.module';
+import { ProdutoModule } from './produto/produto.module';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {UsuarioModule} from './usuario/usuario.module';
     MatBadgeModule,
     MatMenuModule,
     LayoutModule,
-    UsuarioModule
+    UsuarioModule,
+    ProdutoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
