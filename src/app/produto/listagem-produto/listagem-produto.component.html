@@ -1,0 +1,23 @@
+<div>
+    <mat-icon [matBadge]="produtos.length" matBadgeColor="primary">inbox</mat-icon>
+  </div>
+  <div fxLayout="row wrap" fxLayout.lt-sm="column">
+    <mat-card fxFlex="20" class="card-produto" *ngFor="let produto of produtos">
+      <mat-card-header>
+        <mat-card-title>{{produto.nome | titlecase}}</mat-card-title>
+        <mat-card-subtitle *ngIf="produto.cod.length > 0">CÓDIGO: {{produto.cod | cod}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        Custa {{produto.preco}} reais
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button [routerLink]="['/editaproduto', produto.cod]">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-button (click)="excluir(produto)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  
